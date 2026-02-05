@@ -252,3 +252,25 @@ footer {
     border: 4px solid red;
     min-height: 200px;
 }
+
+
+/* FORCE PAGE TO SCROLL */
+html, body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-y: auto !important;
+}
+
+/* FORCE FEATURES SECTION TO RELEASE HEIGHT */
+.features {
+    height: auto !important;
+    min-height: auto !important;
+    display: block !important;
+}
+
+/* FORCE ALL SECTIONS TO BE VISIBLE */
+.stats, .how, .cta, footer {
+    display: block !important;
+    visibility: visible !important;
+    min-height: 200px;
+}
