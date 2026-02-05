@@ -44,13 +44,10 @@ nav ul li a {
 
 /* HERO */
 .hero {
-    background: linear-gradient(to right, #2563eb, #1e3a8a);
-    color: white;
-    padding: 100px 60px;
-}
-
-.hero {
-    margin-bottom: 80px;
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  color: white;
+  padding: 100px 60px;
+  margin-bottom: 80px;
 }
 
 .hero-text {
