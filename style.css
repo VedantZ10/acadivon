@@ -208,3 +208,17 @@ footer {
     font-weight: bold;
     text-decoration: none;
 }
+
+
+/* DEBUG – makes sections clearly visible */
+.stats {
+    background: yellow !important;
+}
+
+.how {
+    background: lightgreen !important;
+}
+
+.cta {
+    background: orange !important;
+}
