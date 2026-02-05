@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance | Acadivon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Acadivon</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+            <li><a href="study.html">Study</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="card">
+        <h2>Attendance Tracker</h2>
+
+        <input type="number" id="total" placeholder="Total Classes">
+        <input type="number" id="attended" placeholder="Attended Classes">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+    </section>
+
+    <script>
+        function calculate() {
+            let total = document.getElementById("total").value;
+            let attended = document.getElementById("attended").value;
+
+            if (total <= 0 || attended < 0 || attended > total) {
+                document.getElementById("result").innerText =
+                    "Please enter valid numbers";
+                return;
+            }
+
+            let percent = (attended / total) * 100;
+            document.getElementById("result").innerText =
+                "Attendance: " + percent.toFixed(2) + "%";
+        }
+    </script>
+
+</body>
+</html>

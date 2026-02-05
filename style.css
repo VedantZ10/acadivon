@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6ff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e3a8a;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #1e3a8a;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #1d4ed8;
+}
+
+.card {
+    background: white;
+    width: 350px;
+    margin: 120px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.card button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.study-container {
+    max-width: 900px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.study-container h2 {
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.study-card {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.study-card:hover {
+    transform: translateY(-5px);
+}
