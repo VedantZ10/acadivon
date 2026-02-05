@@ -274,3 +274,44 @@ html, body {
     visibility: visible !important;
     min-height: 200px;
 }
+
+
+section {
+  padding: 80px 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.card, .stat-box, .how-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .stat-box:hover, .how-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.btn, .hero-buttons a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover, .hero-buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.feature-box, .how-box, .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
