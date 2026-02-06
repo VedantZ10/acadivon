@@ -143,3 +143,58 @@ footer {
     font-size: 32px;
   }
 }
+
+
+/* ===================== */
+/* MOBILE RESPONSIVE FIX */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .features {
+    padding: 40px 15px;
+    gap: 15px;
+  }
+
+  .feature-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .how {
+    padding: 50px 20px;
+  }
+
+  .how-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .how-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .cta {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
