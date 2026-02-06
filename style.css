@@ -5,18 +5,19 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* BODY */
 body {
-  background: #0b0e14;
-  color: #ffffff;
+  background: #0b0f17;
+  color: white;
 }
 
 /* NAVBAR */
 .navbar {
-  background: #0f172a;
-  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 18px 60px;
+  background: linear-gradient(to right, #050a18, #0b1a3a);
 }
 
 .logo {
@@ -25,72 +26,69 @@ body {
   letter-spacing: 2px;
 }
 
-.navbar a {
-  color: #e5e7eb;
-  margin-left: 24px;
+.navbar nav a {
+  color: white;
+  margin-left: 25px;
   text-decoration: none;
-}
-
-.navbar a:hover {
-  color: #60a5fa;
+  font-weight: 500;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  min-height: 75vh;
+  background: linear-gradient(to right, #1c3faa, #2a5be7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 100px 20px;
+}
+
+.hero-content {
+  max-width: 700px;
 }
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 30px;
   opacity: 0.9;
+  margin-bottom: 30px;
 }
 
-/* BUTTONS */
-.btn {
-  padding: 12px 28px;
+.btn-primary {
+  background: white;
+  color: #1c3faa;
+  padding: 14px 30px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-}
-
-.primary {
-  background: #ffffff;
-  color: #1e3a8a;
-}
-
-.secondary {
-  background: #ffffff;
-  color: #1e3a8a;
 }
 
 /* FEATURES */
 .features {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   padding: 60px 20px;
-  background: #0b0e14;
+  background: #0b0f17;
 }
 
-.card {
+.feature-card {
   background: #111827;
   padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  font-weight: 500;
 }
 
 /* HOW IT WORKS */
 .how {
+  background: #0f172a;
+  padding: 70px 20px;
   text-align: center;
-  padding: 60px 20px;
 }
 
 .how h2 {
@@ -105,22 +103,43 @@ body {
 
 .step {
   background: #111827;
-  padding: 16px 24px;
-  border-radius: 8px;
+  padding: 18px 25px;
+  border-radius: 10px;
 }
 
 /* CTA */
 .cta {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  background: linear-gradient(to right, #1c3faa, #2a5be7);
   text-align: center;
   padding: 70px 20px;
 }
 
+.btn-secondary {
+  background: white;
+  color: #1c3faa;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* FOOTER */
 footer {
-  background: #0f172a;
+  background: #050a18;
   text-align: center;
-  padding: 16px;
+  padding: 20px;
   font-size: 14px;
-  color: #9ca3af;
+  opacity: 0.8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .features, .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
 }
