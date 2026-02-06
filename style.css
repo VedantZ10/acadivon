@@ -1,10 +1,3 @@
-html, body {
-    height: auto !important;
-    min-height: 100%;
-    overflow-y: auto !important;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -12,31 +5,23 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f4f6ff;
-    color: #333;
-}
-
 /* NAVBAR */
-nav {
+.navbar {
+    background: #0f2a5f;
+    color: white;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
-    background-color: #1e3a8a;
 }
 
-nav h2 {
-    color: white;
-}
-
-nav ul {
+.navbar ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
-nav ul li a {
+.navbar a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -44,280 +29,81 @@ nav ul li a {
 
 /* HERO */
 .hero {
-  background: linear-gradient(to right, #2563eb, #1e3a8a);
-  color: white;
-  padding: 100px 60px;
-  margin-bottom: 80px;
-
-  min-height: 60vh;   /* 👈 ADD THIS */
+    background: linear-gradient(to right, #2563eb, #1e3a8a);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-.hero {
-  background: linear-gradient(to right, #2563eb, #1e3a8a);
-  color: white;
-  padding: 100px 60px;
-  margin-bottom: 80px;
-}
-
-.hero-text {
-    max-width: 600px;
-}
-
-.hero-text h1 {
+.hero h1 {
     font-size: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.hero-text p {
+.hero p {
     font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.5;
+    margin-bottom: 25px;
 }
 
-.hero-buttons a {
-    display: inline-block;
-    padding: 12px 25px;
-    margin-right: 15px;
+.btn {
     background: white;
     color: #1e3a8a;
+    padding: 12px 25px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-}
-
-.hero-buttons .secondary {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
 }
 
 /* FEATURES */
 .features {
-    padding: 80px 60px;
-    background-color: #f4f6ff;
-    text-align: center;
-}
-
-.features h2 {
-    margin-bottom: 40px;
-    color: #1e3a8a;
-}
-
-.feature-box {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.feature-card {
-    background: white;
-    width: 260px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* FOOTER */
-footer {
-    background-color: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 50px;
-}
-
-/* REUSABLE CARD (Attendance/Login) */
-.card {
-    background: white;
-    width: 350px;
-    margin: 120px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.card input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.card button {
-    width: 100%;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* STUDY CARDS */
-.study-container {
-    max-width: 900px;
-    margin: 120px auto;
-
-}
-
-/* ===== STATS SECTION ===== */
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 100px 40px;
-    background: #ffffff;
-    border: 5px solid red;
-}
-
-.stat-box {
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
     background: #f4f6ff;
+}
+
+.box {
+    background: white;
     padding: 30px;
-    width: 250px;
-    text-align: center;
     border-radius: 10px;
-    font-weight: bold;
-}
-
-/* ===== HOW IT WORKS ===== */
-.how {
-    padding: 80px 60px;
     text-align: center;
-    background-color: #f4f6ff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.how h2 {
-    margin-bottom: 40px;
-    color: #1e3a8a;
+/* HOW IT WORKS */
+.how {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-.how-box {
+.steps {
     display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.how-card {
-    background: white;
+.step {
+    background: #f4f6ff;
     padding: 25px;
     width: 220px;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* ===== CALL TO ACTION ===== */
+/* CTA */
 .cta {
     background: linear-gradient(to right, #1e3a8a, #2563eb);
     color: white;
-    padding: 80px;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.cta a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background: white;
-    color: #1e3a8a;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-
-/* DEBUG – makes sections clearly visible */
-.stats {
-    background: yellow !important;
-}
-
-.how {
-    background: lightgreen !important;
-}
-
-.cta {
-    background: orange !important;
-}
-
-.stats, .stats * {
-    color: black !important;
-}
-
-.how, .how * {
-    color: black !important;
-}
-
-.cta, .cta * {
-    color: white !important;
-}
-
-.stats {
-    background: #ffffff !important;
-    border: 4px solid red;
-    min-height: 200px;
-}
-
-
-/* FORCE PAGE TO SCROLL */
-html, body {
-    height: auto !important;
-    min-height: 100% !important;
-    overflow-y: auto !important;
-}
-
-/* FORCE FEATURES SECTION TO RELEASE HEIGHT */
-.features {
-    height: auto !important;
-    min-height: auto !important;
-    display: block !important;
-}
-
-/* FORCE ALL SECTIONS TO BE VISIBLE */
-.stats, .how, .cta, footer {
-    display: block !important;
-    visibility: visible !important;
-    min-height: 200px;
-}
-
-
-section {
-  padding: 80px 20px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.card, .stat-box, .how-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover, .stat-box:hover, .how-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-.btn, .hero-buttons a {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover, .hero-buttons a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.feature-box, .how-box, .stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  max-width: 1000px;
-  margin: auto;
+/* FOOTER */
+footer {
+    background: #0f2a5f;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
