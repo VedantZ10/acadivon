@@ -5,19 +5,19 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* BODY */
 body {
-  background: #0b0f17;
-  color: white;
+  background: #0b0f14;
+  color: #f5f5f5;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 14px 40px;
-  background: #0b1220;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
 }
 
 .nav-left {
@@ -26,42 +26,49 @@ body {
   gap: 12px;
 }
 
-.logo {
-  height: 42px;   /* THIS is the key */
-  width: auto;
-  object-fit: contain;
+.logo-img {
+  width: 42px;
+  height: 42px;
 }
 
+.logo-text {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #ddd;
+  margin-left: 22px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #fff;
+}
 
 /* HERO */
 .hero {
-  min-height: 75vh;
-  background: linear-gradient(to right, #1c3faa, #2a5be7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-}
-
-.hero-content {
-  max-width: 700px;
+  padding: 120px 20px;
+  background: radial-gradient(circle at center, #1b2330, #0b0f14);
 }
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .hero p {
-  font-size: 18px;
-  opacity: 0.9;
+  font-size: 16px;
+  color: #ccc;
   margin-bottom: 30px;
 }
 
 .btn-primary {
-  background: white;
-  color: #1c3faa;
-  padding: 14px 30px;
+  background: #e5e5e5;
+  color: #000;
+  padding: 12px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -71,24 +78,21 @@ body {
 .features {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   padding: 60px 20px;
-  background: #0b0f17;
 }
 
 .feature-card {
-  background: #111827;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  font-weight: 500;
+  background: rgba(255,255,255,0.08);
+  padding: 18px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 /* HOW IT WORKS */
 .how {
-  background: #0f172a;
-  padding: 70px 20px;
   text-align: center;
+  padding: 70px 20px;
 }
 
 .how h2 {
@@ -102,22 +106,22 @@ body {
 }
 
 .step {
-  background: #111827;
-  padding: 18px 25px;
+  background: rgba(255,255,255,0.08);
+  padding: 14px 24px;
   border-radius: 10px;
 }
 
 /* CTA */
 .cta {
-  background: linear-gradient(to right, #1c3faa, #2a5be7);
   text-align: center;
   padding: 70px 20px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
 }
 
 .btn-secondary {
-  background: white;
-  color: #1c3faa;
-  padding: 14px 30px;
+  background: #e5e5e5;
+  color: #000;
+  padding: 12px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -125,11 +129,10 @@ body {
 
 /* FOOTER */
 footer {
-  background: #050a18;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
-  opacity: 0.8;
+  background: #080b10;
+  color: #aaa;
 }
 
 /* MOBILE */
@@ -139,62 +142,7 @@ footer {
     align-items: center;
   }
 
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-
-
-/* ===================== */
-/* MOBILE RESPONSIVE FIX */
-/* ===================== */
-
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 70px 20px;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-  }
-
-  .features {
-    padding: 40px 15px;
-    gap: 15px;
-  }
-
-  .feature-card {
-    width: 100%;
-    padding: 18px;
-  }
-
-  .how {
-    padding: 50px 20px;
-  }
-
-  .how-box {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .how-card {
-    width: 100%;
-    padding: 16px;
-  }
-
-  .cta {
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  footer {
-    font-size: 13px;
-    padding: 15px;
+  nav {
+    display: none;
   }
 }

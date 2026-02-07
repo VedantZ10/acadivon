@@ -1,3 +1,1 @@
-function showMessage() {
-    alert("Acadivon is working perfectly 🚀");
-}
+// Future interactivity
