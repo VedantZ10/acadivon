@@ -13,12 +13,33 @@ body {
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center; /* 👈 THIS centers everything */
   padding: 18px 40px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
+  background: #000;
+  position: relative;
 }
+
+.navbar nav {
+  display: flex;
+  gap: 32px; /* space between buttons */
+}
+
+.navbar nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 700;        /* 👈 BOLD */
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
 
 .nav-left {
   display: flex;
@@ -514,3 +535,14 @@ section.features .feature-card:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 18px 45px rgba(0,0,0,0.75);
 }
+
+
+.logo {
+  position: absolute;
+  left: 40px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
