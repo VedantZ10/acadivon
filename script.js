@@ -22,6 +22,12 @@ function addAttendance() {
     statusText = "Danger";
   }
 
+  // 🔹 SAVE DATA TO localStorage
+  let data = JSON.parse(localStorage.getItem("attendanceData")) || [];
+  data.push({ subject, attended, total });
+  localStorage.setItem("attendanceData", JSON.stringify(data));
+
+  // 🔹 ADD ROW TO TABLE
   const row = `
     <tr>
       <td>${subject}</td>
@@ -31,13 +37,17 @@ function addAttendance() {
       <td class="${statusClass}">${statusText}</td>
     </tr>
   `;
-
   document.getElementById("attendanceData").innerHTML += row;
 
+  // 🔹 REFRESH SUBJECT WISE ANALYSIS
+  renderAnalysis();
+
+  // 🔹 CLEAR INPUTS
   document.getElementById("subject").value = "";
   document.getElementById("total").value = "";
   document.getElementById("attended").value = "";
 }
+
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -168,3 +178,28 @@ function renderAnalysis() {
 }
 
 document.addEventListener("DOMContentLoaded", renderAnalysis);
+
+function renderAnalysis() {
+  const container = document.getElementById("analysisCards");
+  if (!container) return;
+
+  const data = JSON.parse(localStorage.getItem("attendanceData")) || [];
+  container.innerHTML = "";
+
+  data.forEach(item => {
+    const percent = ((item.attended / item.total) * 100).toFixed(2);
+    let status = "Safe";
+
+    if (percent < 75 && percent >= 60) status = "Warning";
+    else if (percent < 60) status = "Danger";
+
+    const card = `
+      <div class="analysis-card ${status.toLowerCase()}">
+        <h3>${item.subject}</h3>
+        <p>${percent}% Attendance</p>
+        <span>${status}</span>
+      </div>
+    `;
+    container.innerHTML += card;
+  });
+}
