@@ -47,15 +47,25 @@ body {
   gap: 12px;
 }
 
-.logo-img {
-  width: 42px;
-  height: 42px;
-}
-
-.logo-text {
-  font-size: 20px;
+.logo {
+  position: absolute;
+  left: 20px;              /* 👈 move more to the LEFT */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;         /* ACADIVON text size */
+  font-weight: 800;
   letter-spacing: 2px;
 }
+
+.logo img {
+  height: 44px;            /* 👈 increase logo size */
+  width: auto;
+}
+.navbar {
+  padding-left: 90px;
+}
+
 
 nav a {
   color: #ddd;
@@ -537,12 +547,5 @@ section.features .feature-card:hover {
 }
 
 
-.logo {
-  position: absolute;
-  left: 40px;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
 
 
