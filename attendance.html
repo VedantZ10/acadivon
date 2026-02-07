@@ -5,6 +5,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 style="padding:40px;">Attendance Page</h1>
+ <header class="navbar">
+  <div class="logo">ACADIVON</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="attendance.html" class="active">Attendance</a>
+    <a href="study.html">Study</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="attendance">
+  <h1>📊 Attendance Tracker</h1>
+
+  <div class="attendance-form">
+    <input type="text" id="subject" placeholder="Subject Name" />
+    <input type="number" id="total" placeholder="Total Classes" />
+    <input type="number" id="attended" placeholder="Attended Classes" />
+    <button onclick="addAttendance()">Add</button>
+  </div>
+
+  <div class="attendance-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Attended</th>
+          <th>Total</th>
+          <th>Percentage</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceData">
+        <!-- Data will appear here -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  © 2026 Acadivon | College Project
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
