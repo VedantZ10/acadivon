@@ -475,3 +475,42 @@ section.features > div:hover {
   transform: translateY(-6px) scale(1.06) !important;
   box-shadow: 0 18px 45px rgba(0,0,0,0.75) !important;
 }
+
+/* ===== FEATURES BUTTON CENTER FIX ===== */
+
+section.features {
+  display: flex;
+  justify-content: center;   /* CENTER HORIZONTALLY */
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+section.features .feature-card {
+  min-width: 240px;
+  padding: 18px 28px;
+
+  font-size: 1.15rem;
+  font-weight: 800;          /* BOLD TEXT */
+  letter-spacing: 0.4px;
+
+  text-align: center;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.14),
+    rgba(255,255,255,0.05)
+  );
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+  color: #ffffff;
+
+  transition: all 0.25s ease;
+}
+
+section.features .feature-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.75);
+}
