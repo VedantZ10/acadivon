@@ -5,6 +5,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 style="padding:40px;">Study Materials</h1>
+ <header class="navbar">
+  <div class="logo">ACADIVON</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="study.html" class="active">Study</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="tasks">
+  <h1>📝 Study Tasks</h1>
+
+  <div class="task-input">
+    <input type="text" id="taskInput" placeholder="Enter your task..." />
+    <button onclick="addTask()">Add Task</button>
+  </div>
+
+  <ul id="taskList"></ul>
+</section>
+
+<footer>
+  © 2026 Acadivon | College Project
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

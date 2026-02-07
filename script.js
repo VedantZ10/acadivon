@@ -38,3 +38,47 @@ function addAttendance() {
   document.getElementById("total").value = "";
   document.getElementById("attended").value = "";
 }
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function renderTasks() {
+  const list = document.getElementById("taskList");
+  if (!list) return;
+
+  list.innerHTML = "";
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    if (task.completed) li.classList.add("completed");
+
+    li.innerHTML = `
+      <span onclick="toggleTask(${index})">${task.text}</span>
+      <div class="task-actions">
+        <button onclick="deleteTask(${index})">❌</button>
+      </div>
+    `;
+    list.appendChild(li);
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function addTask() {
+  const input = document.getElementById("taskInput");
+  if (!input.value.trim()) return;
+
+  tasks.push({ text: input.value, completed: false });
+  input.value = "";
+  renderTasks();
+}
+
+function toggleTask(index) {
+  tasks[index].completed = !tasks[index].completed;
+  renderTasks();
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  renderTasks();
+}
+
+document.addEventListener("DOMContentLoaded", renderTasks);
