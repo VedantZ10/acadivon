@@ -82,3 +82,54 @@ function deleteTask(index) {
 }
 
 document.addEventListener("DOMContentLoaded", renderTasks);
+
+const today = new Date().toDateString();
+
+let dailyData = JSON.parse(localStorage.getItem("dailyTasks")) || {
+  date: today,
+  tasks: []
+};
+
+if (dailyData.date !== today) {
+  dailyData = { date: today, tasks: [] };
+}
+
+function renderDaily() {
+  const list = document.getElementById("dailyList");
+  if (!list) return;
+
+  list.innerHTML = "";
+  dailyData.tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    if (task.done) li.classList.add("done");
+
+    li.innerHTML = `
+      <span onclick="toggleDaily(${index})">${task.text}</span>
+      <button onclick="deleteDaily(${index})">❌</button>
+    `;
+    list.appendChild(li);
+  });
+
+  localStorage.setItem("dailyTasks", JSON.stringify(dailyData));
+}
+
+function addDailyTask() {
+  const input = document.getElementById("dailyInput");
+  if (!input.value.trim()) return;
+
+  dailyData.tasks.push({ text: input.value, done: false });
+  input.value = "";
+  renderDaily();
+}
+
+function toggleDaily(index) {
+  dailyData.tasks[index].done = !dailyData.tasks[index].done;
+  renderDaily();
+}
+
+function deleteDaily(index) {
+  dailyData.tasks.splice(index, 1);
+  renderDaily();
+}
+
+document.addEventListener("DOMContentLoaded", renderDaily);

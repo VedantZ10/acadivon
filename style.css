@@ -336,3 +336,35 @@ footer {
   cursor: pointer;
   font-size: 16px;
 }
+
+.daily {
+  padding: 60px 10%;
+  background: radial-gradient(circle at top, #161a22, #0b0d11);
+  color: white;
+}
+
+.daily h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#dailyList {
+  list-style: none;
+  max-width: 500px;
+  margin: auto;
+  padding: 0;
+}
+
+#dailyList li {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dailyList li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
