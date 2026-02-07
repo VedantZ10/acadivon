@@ -368,3 +368,31 @@ footer {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
+/* SUBJECT WISE ANALYSIS */
+.analysis {
+  padding: 60px 10%;
+  color: white;
+}
+
+.analysis h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.analysis-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.safe { border-left: 5px solid #2ecc71; }
+.warn { border-left: 5px solid #f1c40f; }
+.danger { border-left: 5px solid #e74c3c; }

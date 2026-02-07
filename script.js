@@ -133,3 +133,38 @@ function deleteDaily(index) {
 }
 
 document.addEventListener("DOMContentLoaded", renderDaily);
+
+function renderAnalysis() {
+  const container = document.getElementById("analysisCards");
+  if (!container) return;
+
+  const data = JSON.parse(localStorage.getItem("attendanceData")) || [];
+  container.innerHTML = "";
+
+  data.forEach(subject => {
+    const percent = ((subject.attended / subject.total) * 100).toFixed(1);
+
+    let status = "safe";
+    let label = "Safe";
+
+    if (percent < 75) {
+      status = "danger";
+      label = "Danger";
+    } else if (percent < 85) {
+      status = "warn";
+      label = "Warning";
+    }
+
+    const card = document.createElement("div");
+    card.className = `analysis-card ${status}`;
+    card.innerHTML = `
+      <h3>${subject.name}</h3>
+      <p>Attendance: <strong>${percent}%</strong></p>
+      <p>Status: <strong>${label}</strong></p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderAnalysis);
