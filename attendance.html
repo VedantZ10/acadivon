@@ -1,52 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance | Acadivon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
 <header class="navbar">
-  <div class="logo-area">
-    <img src="logo.png">
-    <span>ACADIVON</span>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="attendance.html" class="active">Attendance</a>
-    <a href="study.html">Study</a>
-    <a href="login.html">Login</a>
-  </nav>
+    <div class="logo-section">
+        <img src="AcadivonLogo.jpeg" class="logo">
+        <h2>ACADIVON</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="attendance.html" class="active">Attendance</a>
+        <a href="study.html">Study</a>
+        <a href="login.html">Login</a>
+    </nav>
 </header>
 
+<!-- ATTENDANCE SECTION -->
+<section class="attendance-page">
 
-<section class="attendance">
-  <h1>📊 Attendance Tracker</h1>
+    <h1>📊 Attendance Tracker</h1>
 
-  <div class="attendance-form">
-    <input type="text" id="subject" placeholder="Subject Name" />
-    <input type="number" id="total" placeholder="Total Classes" />
-    <input type="number" id="attended" placeholder="Attended Classes" />
-    <button onclick="addAttendance()">Add</button>
-  </div>
+    <div class="attendance-form">
+        <input type="text" id="subject" placeholder="Subject Name">
+        <input type="number" id="total" placeholder="Total Classes">
+        <input type="number" id="attended" placeholder="Attended Classes">
+        <button onclick="addAttendance()">Add</button>
+    </div>
 
-  <div class="attendance-table">
-    <table>
-      <thead>
-        <tr>
-          <th>Subject</th>
-          <th>Attended</th>
-          <th>Total</th>
-          <th>Percentage</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody id="attendanceData">
-        <!-- Data will appear here -->
-      </tbody>
-    </table>
-  </div>
-</section>
-<section class="analysis">
-  <h2>📊 Subject Wise Analysis</h2>
+    <div class="attendance-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Attended</th>
+                    <th>Total</th>
+                    <th>Percentage</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceData"></tbody>
+        </table>
+    </div>
 
-  <div id="analysisCards" class="analysis-grid"></div>
 </section>
 
 <footer>
-  © 2026 Acadivon | College Project
+    © 2026 Acadivon | College Project
 </footer>
 
 <script src="script.js"></script>
