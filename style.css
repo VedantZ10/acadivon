@@ -160,3 +160,41 @@ footer{
   backdrop-filter:blur(10px);
   font-size:14px;
 }
+
+.attendance-page {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.attendance-form {
+    margin: 30px 0;
+}
+
+.attendance-form input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+.attendance-form button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.attendance-table table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 12px;
+    text-align: center;
+}
