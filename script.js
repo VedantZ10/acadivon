@@ -21,6 +21,20 @@ function addAttendance() {
     statusClass = "status-danger";
     statusText = "Danger";
   }
+function renderAnalysis(subject, percentage, statusText, statusClass) {
+  const container = document.getElementById("analysisCards");
+
+  const card = document.createElement("div");
+  card.className = `analysis-card ${statusClass}`;
+
+  card.innerHTML = `
+    <h3>${subject}</h3>
+    <p>${percentage}%</p>
+    <span>${statusText}</span>
+  `;
+
+  container.appendChild(card);
+}
 
   // 🔹 SAVE DATA TO localStorage
   let data = JSON.parse(localStorage.getItem("attendanceData")) || [];
