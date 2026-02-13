@@ -267,3 +267,81 @@ footer{
 .attendance-table tr:nth-child(even) {
     background: #f1f5f9;
 }
+
+
+/* ===== Attendance Page ===== */
+
+.attendance-page {
+    padding: 120px 10%;
+    text-align: center;
+    background: linear-gradient(to bottom, #dbeafe, #bfdbfe);
+    min-height: 100vh;
+}
+
+.attendance-page h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.attendance-form input {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+}
+
+.attendance-form button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.attendance-table table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.attendance-table th {
+    background: #2563eb;
+    color: white;
+    padding: 15px;
+}
+
+.attendance-table td {
+    padding: 15px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 5px;
+}
+
+.progress-fill {
+    height: 8px;
+    border-radius: 5px;
+}
+
+.safe { color: green; font-weight: bold; }
+.warning { color: orange; font-weight: bold; }
+.danger { color: red; font-weight: bold; }
+
+.action-btn {
+    padding: 6px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.edit-btn { background: #3b82f6; color: white; }
+.delete-btn { background: #ef4444; color: white; }
