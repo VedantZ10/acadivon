@@ -90,3 +90,8 @@ function renderTable() {
 }
 
 renderTable();
+
+// Website loaded check
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Acadivon interface loaded successfully");
+});
