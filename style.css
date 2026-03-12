@@ -6,7 +6,15 @@ font-family:Segoe UI;
 }
 
 body{
-background:red;
+margin:0;
+padding:0;
+
+background-image:url("images/sky-bg.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 }
 
 /* NAVBAR */
