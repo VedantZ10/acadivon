@@ -6,6 +6,9 @@ font-family:Segoe UI;
 }
 
 body{
+margin:0;
+padding:0;
+font-family:"Segoe UI", sans-serif;
 
 background:
 linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
@@ -15,9 +18,7 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 background-attachment:fixed;
-
 }
-
 
 /* NAVBAR */
 
