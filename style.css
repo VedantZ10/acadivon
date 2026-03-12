@@ -2,15 +2,15 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins;
+font-family:Segoe UI;
 }
 
 body{
 
-background:linear-gradient(to bottom,#cfe7ff,#e9f3ff);
+background:url("images/sky-bg.jpg") no-repeat center;
+background-size:cover;
 
-min-height:100vh;
-
+color:#1b2a3a;
 }
 
 
@@ -19,18 +19,16 @@ min-height:100vh;
 .navbar{
 
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
 
-padding:20px 8%;
+padding:20px 80px;
 
-background:rgba(255,255,255,0.4);
+backdrop-filter:blur(15px);
 
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.35);
 
-border-radius:20px;
+border-radius:40px;
 
 margin:20px;
 
@@ -39,9 +37,7 @@ margin:20px;
 .logo{
 
 display:flex;
-
 align-items:center;
-
 gap:10px;
 
 }
@@ -55,9 +51,7 @@ height:40px;
 nav{
 
 display:flex;
-
 align-items:center;
-
 gap:30px;
 
 }
@@ -65,29 +59,10 @@ gap:30px;
 nav a{
 
 text-decoration:none;
-
-color:#1e293b;
-
+color:#2c3e50;
 font-weight:500;
 
 }
-
-.start-btn{
-
-padding:10px 20px;
-
-border:none;
-
-border-radius:10px;
-
-background:#3b82f6;
-
-color:white;
-
-cursor:pointer;
-
-}
-
 
 
 /* HERO */
@@ -95,69 +70,79 @@ cursor:pointer;
 .hero{
 
 text-align:center;
-
-padding:120px 10%;
+padding:120px 20px;
 
 }
 
 .hero h1{
 
 font-size:48px;
-
-color:#1e293b;
-
 margin-bottom:20px;
 
 }
 
 .hero p{
 
-color:#475569;
-
+font-size:18px;
 margin-bottom:30px;
 
 }
 
+
 .hero-buttons{
 
 display:flex;
-
 justify-content:center;
-
 gap:20px;
 
 }
 
-.primary{
 
-padding:14px 28px;
+/* BUTTONS */
+
+.primary-btn{
+
+background:linear-gradient(135deg,#4a8cff,#2563eb);
 
 border:none;
-
-background:#2563eb;
-
 color:white;
 
-border-radius:10px;
+padding:12px 24px;
+
+border-radius:12px;
 
 cursor:pointer;
 
+transition:0.3s;
+
 }
 
-.secondary{
+.primary-btn:hover{
 
-padding:14px 28px;
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
 
-border:none;
+}
+
+.big{
+
+font-size:18px;
+padding:16px 32px;
+
+}
+
+.secondary-btn{
 
 background:white;
+border:none;
 
-border-radius:10px;
+padding:12px 20px;
+
+border-radius:12px;
 
 cursor:pointer;
 
 }
-
 
 
 /* FEATURES */
@@ -165,18 +150,15 @@ cursor:pointer;
 .features{
 
 text-align:center;
-
-padding:80px 10%;
+padding:80px 20px;
 
 }
 
 .feature-grid{
 
 display:flex;
-
 justify-content:center;
-
-gap:30px;
+gap:40px;
 
 margin-top:40px;
 
@@ -184,18 +166,25 @@ margin-top:40px;
 
 .feature-card{
 
-background:white;
+background:rgba(255,255,255,0.5);
 
 padding:30px;
 
-border-radius:20px;
-
 width:260px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+transition:0.3s;
 
 }
 
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+}
 
 
 /* DASHBOARD */
@@ -204,7 +193,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.1);
 
 text-align:center;
 
-padding:80px 10%;
+padding:100px 20px;
 
 }
 
@@ -220,57 +209,37 @@ margin-top:40px;
 
 }
 
-.analysis-card{
 
-background:white;
+.overall-card{
+
+background:rgba(255,255,255,0.5);
 
 padding:40px;
 
 border-radius:20px;
 
-width:250px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+width:240px;
 
 }
 
-.circle{
+.overall-card h1{
 
-width:120px;
-
-height:120px;
-
-border-radius:50%;
-
-background:#3b82f6;
-
-color:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:28px;
-
-margin:auto;
-
-margin-top:20px;
+font-size:42px;
+color:#2563eb;
 
 }
+
 
 .table-card{
 
-background:white;
+background:rgba(255,255,255,0.6);
 
 padding:30px;
 
 border-radius:20px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-
 }
+
 
 table{
 
@@ -280,26 +249,41 @@ border-collapse:collapse;
 
 th,td{
 
-padding:12px 18px;
+padding:12px 20px;
 
 }
 
 th{
 
 background:#3b82f6;
-
 color:white;
 
 }
 
+.safe{
 
+color:green;
+
+}
+
+.warning{
+
+color:orange;
+
+}
+
+.danger{
+
+color:red;
+
+}
+
+
+/* FOOTER */
 
 footer{
 
 text-align:center;
-
-padding:30px;
-
-color:#475569;
+padding:40px;
 
 }

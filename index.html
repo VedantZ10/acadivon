@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acadivon</title>
+<title>Acadivon | Smart Attendance Manager</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <header class="navbar">
 
@@ -21,33 +22,40 @@
 
 <nav>
 
-<a class="active" href="#">Home</a>
-<a href="attendance.html">Attendance</a>
-<a href="study.html">Study</a>
-<a href="login.html">Login</a>
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Dashboard</a>
+<a href="#">Login</a>
 
-<button class="start-btn">Get Started</button>
+<button class="primary-btn">Get Started</button>
 
 </nav>
 
 </header>
 
 
+<!-- HERO SECTION -->
+
 <section class="hero">
 
 <h1>Manage Your Study<br>Attendance Effortlessly</h1>
 
-<p>Track your class attendance and achieve your academic goals with ease.</p>
+<p>
+Track your class attendance and achieve your academic goals with ease.
+</p>
 
 <div class="hero-buttons">
 
-<button class="primary">Get Started</button>
-<button class="secondary">Watch Demo</button>
+<button class="primary-btn big">Get Started</button>
+
+<button class="secondary-btn">Watch Demo</button>
 
 </div>
 
 </section>
 
+
+<!-- FEATURES -->
 
 <section class="features">
 
@@ -59,7 +67,9 @@
 
 <h3>Attendance Tracker</h3>
 
-<p>Easily log your class attendance and monitor your attendance in real time.</p>
+<p>
+Easily log your class attendance and monitor progress.
+</p>
 
 </div>
 
@@ -67,7 +77,9 @@
 
 <h3>Analytics & Insights</h3>
 
-<p>Get detailed reports and insights on your attendance.</p>
+<p>
+Detailed reports and insights on your attendance.
+</p>
 
 </div>
 
@@ -75,7 +87,9 @@
 
 <h3>Smart Reminders</h3>
 
-<p>Receive alerts and suggestions to maintain attendance.</p>
+<p>
+Receive alerts to maintain a healthy attendance.
+</p>
 
 </div>
 
@@ -84,29 +98,30 @@
 </section>
 
 
+<!-- DASHBOARD -->
 
 <section class="dashboard">
 
 <h2>Attendance Dashboard</h2>
 
-<p>Monitor and analyze your attendance with ease.</p>
-
-
 <div class="dashboard-container">
 
-<div class="analysis-card">
+<div class="overall-card">
 
 <h3>Overall Attendance</h3>
 
-<div class="circle">79%</div>
+<h1>79%</h1>
+
+<p>Safe Attendance</p>
 
 </div>
-
 
 
 <div class="table-card">
 
 <table>
+
+<thead>
 
 <tr>
 
@@ -114,35 +129,39 @@
 <th>Attended</th>
 <th>Total</th>
 <th>Percentage</th>
+<th>Status</th>
 
 </tr>
 
-<tr>
+</thead>
 
+<tbody>
+
+<tr>
 <td>Math</td>
 <td>7</td>
 <td>8</td>
 <td>87%</td>
-
+<td class="safe">Safe</td>
 </tr>
 
 <tr>
-
 <td>Physics</td>
+<td>7</td>
+<td>8</td>
+<td>79%</td>
+<td class="warning">Warning</td>
+</tr>
+
+<tr>
+<td>History</td>
 <td>6</td>
 <td>8</td>
-<td>75%</td>
-
+<td>67%</td>
+<td class="danger">Danger</td>
 </tr>
 
-<tr>
-
-<td>Chemistry</td>
-<td>5</td>
-<td>8</td>
-<td>62%</td>
-
-</tr>
+</tbody>
 
 </table>
 
@@ -155,10 +174,9 @@
 
 <footer>
 
-<p>© 2026 Acadivon | College Project</p>
+© 2026 Acadivon | College Project
 
 </footer>
-
 
 <script src="script.js"></script>
 
