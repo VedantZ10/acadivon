@@ -293,3 +293,46 @@ text-align:center;
 padding:40px;
 
 }
+
+.attendance-container{
+display:flex;
+gap:40px;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.overall-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+#attendanceTable{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+#attendanceTable th{
+background:#3d73d8;
+color:white;
+padding:12px;
+}
+
+#attendanceTable td{
+padding:12px;
+text-align:center;
+}
+
+button{
+background:#3d73d8;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+}
