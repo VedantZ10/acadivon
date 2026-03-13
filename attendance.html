@@ -3,63 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Attendance | Acadivon</title>
-<link rel="stylesheet" href="style.css">
+<title>Attendance Tracker | Acadivon</title>
+
+<style>
+
+body{
+font-family:"Segoe UI",sans-serif;
+margin:0;
+padding:0;
+background:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url("sky-bg.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+
+h1{
+color:#1e2b40;
+margin-bottom:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+th{
+background:#3d73d8;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f5f7fb;
+}
+
+button{
+background:#3d73d8;
+border:none;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.excellent{
+color:green;
+font-weight:600;
+}
+
+.average{
+color:orange;
+font-weight:600;
+}
+
+.attention{
+color:red;
+font-weight:600;
+}
+
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="Acadivon Logo">
-        <h1>ACADIVON</h1>
-    </div>
+<div class="container">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="attendance.html" class="active">Attendance</a>
-        <a href="study.html">Study</a>
-        <a href="login.html">Login</a>
-    </nav>
-</header>
+<h1>📊 Weekly Attendance Tracker</h1>
 
+<table id="attendanceTable">
 
-<section class="attendance-page">
-
-<h1>📊 Attendance Tracker</h1>
-
-<div class="attendance-form">
-    <input type="text" id="subject" placeholder="Subject Name">
-    <input type="number" id="total" placeholder="Total Classes">
-    <input type="number" id="attended" placeholder="Attended Classes">
-    <button onclick="addAttendance()">Add</button>
-</div>
-
-<div class="attendance-table">
-<table>
-<thead>
 <tr>
 <th>Subject</th>
-<th>Attended</th>
-<th>Total</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
 <th>Percentage</th>
-<th>Progress</th>
 <th>Status</th>
-<th>Actions</th>
 </tr>
-</thead>
 
-<tbody id="attendanceData"></tbody>
+<tr>
+<td>Math</td>
+
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+
+<td class="percent">0%</td>
+<td class="status">-</td>
+</tr>
+
+<tr>
+<td>Physics</td>
+
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+
+<td class="percent">0%</td>
+<td class="status">-</td>
+</tr>
+
+<tr>
+<td>History</td>
+
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+<td><input type="checkbox"></td>
+
+<td class="percent">0%</td>
+<td class="status">-</td>
+</tr>
 
 </table>
+
+<br><br>
+
+<button onclick="calculateAttendance()">Calculate Attendance</button>
+
 </div>
 
-</section>
+<script>
 
-<footer>
-© 2026 Acadivon | College Project
-</footer>
+function calculateAttendance(){
 
-<script src="script.js"></script>
+const rows=document.querySelectorAll("#attendanceTable tr");
+
+rows.forEach((row,index)=>{
+
+if(index===0) return;
+
+const checkboxes=row.querySelectorAll("input");
+const percentCell=row.querySelector(".percent");
+const statusCell=row.querySelector(".status");
+
+let present=0;
+
+checkboxes.forEach(box=>{
+if(box.checked) present++;
+});
+
+let percentage=(present/checkboxes.length)*100;
+
+percentCell.innerText=percentage.toFixed(0)+"%";
+
+if(percentage>=85){
+statusCell.innerText="Excellent";
+statusCell.className="status excellent";
+}
+else if(percentage>=75){
+statusCell.innerText="Average";
+statusCell.className="status average";
+}
+else{
+statusCell.innerText="Needs Attention";
+statusCell.className="status attention";
+}
+
+});
+
+}
+
+</script>
+
 </body>
 </html>
