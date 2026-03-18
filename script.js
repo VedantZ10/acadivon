@@ -64,3 +64,34 @@ let overall=(totalPercent/subjects).toFixed(0);
 document.getElementById("overallPercent").innerText=overall+"%";
 
 }
+
+
+// Scroll animation (fade-in)
+const elements = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", () => {
+elements.forEach(el => {
+const position = el.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 100){
+el.classList.add("show");
+}
+});
+});
+
+
+// Smooth scroll for View Dashboard button
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener("click", function(e) {
+e.preventDefault();
+
+const target = document.querySelector(this.getAttribute("href"));
+
+if(target){
+target.scrollIntoView({
+behavior: "smooth"
+});
+}
+});
+});

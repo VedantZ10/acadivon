@@ -361,3 +361,82 @@ box-shadow:0 12px 25px rgba(0,0,0,0.15);
 html{
 scroll-behavior:smooth;
 }
+
+/* Smooth scroll */
+html{
+scroll-behavior:smooth;
+}
+
+/* Hero buttons layout */
+.hero-buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+/* Primary Button */
+.primary-btn{
+padding:14px 28px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#3d73d8,#5a8dee);
+color:white;
+font-weight:600;
+cursor:pointer;
+
+transition:all 0.3s ease;
+box-shadow:0 8px 20px rgba(61,115,216,0.4);
+}
+
+.primary-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(61,115,216,0.6);
+}
+
+/* Secondary Button */
+.secondary-btn{
+padding:14px 28px;
+border-radius:12px;
+background:rgba(255,255,255,0.85);
+color:#3d73d8;
+font-weight:600;
+text-decoration:none;
+
+transition:all 0.3s ease;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.secondary-btn:hover{
+background:#ffffff;
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Click animation */
+button:active, .secondary-btn:active{
+transform:scale(0.95);
+}
+
+/* Fade-in animation */
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
