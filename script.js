@@ -125,33 +125,36 @@ userMsg.innerText = userText;
 chatBox.appendChild(userMsg);
 
 // AI response
-const botMsg = document.createElement("div");
-botMsg.className = "bot-message";
-
-let reply = "";
-
-// Simple AI logic
-if(userText.toLowerCase().includes("attendance")){
-  reply = "Try to maintain at least 75%. Attend next classes regularly.";
-}
-else if(userText.toLowerCase().includes("study plan")){
-  reply = "Study 2-3 subjects daily. Focus more on weak subjects.";
-}
-else if(userText.toLowerCase().includes("low")){
-  reply = "Your attendance seems low. Prioritize classes and reduce absences.";
-}
-else if(userText.toLowerCase().includes("exam")){
-  reply = "Revise daily and practice previous papers. Focus on important topics.";
-}
-else{
-  reply = "I suggest focusing on your weak subjects and maintaining consistency.";
-}
-
-botMsg.innerText = reply;
-chatBox.appendChild(botMsg);
-
+let reply = generateReply(userText);
 // Auto scroll
 chatBox.scrollTop = chatBox.scrollHeight;
 
 input.value = "";
+}
+
+function generateReply(text){
+
+text = text.toLowerCase();
+
+if(text.includes("javascript")){
+return "JavaScript is a programming language used to make websites interactive.";
+}
+
+if(text.includes("python")){
+return "Python is used for AI, web development, and automation.";
+}
+
+if(text.includes("study plan")){
+return "Study 2-3 subjects daily and focus more on weak areas.";
+}
+
+if(text.includes("attendance")){
+return "Maintain at least 75% attendance to stay safe.";
+}
+
+if(text.includes("exam")){
+return "Revise regularly and practice previous papers.";
+}
+
+return "I'm here to help! Ask me about studies, attendance, or programming 😊";
 }
