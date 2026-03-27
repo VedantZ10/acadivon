@@ -67,18 +67,25 @@ document.getElementById("overallPercent").innerText=overall+"%";
 
 
 // Scroll animation (fade-in)
+// Show elements on page load + scroll
 const elements = document.querySelectorAll(".fade-in");
 
-window.addEventListener("scroll", () => {
+function showElements() {
 elements.forEach(el => {
 const position = el.getBoundingClientRect().top;
 const screenHeight = window.innerHeight;
 
-if(position < screenHeight - 100){
+if(position < screenHeight - 50){
 el.classList.add("show");
 }
 });
-});
+}
+
+// Run on load
+window.addEventListener("load", showElements);
+
+// Run on scroll
+window.addEventListener("scroll", showElements);
 
 
 // Smooth scroll for View Dashboard button
