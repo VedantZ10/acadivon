@@ -95,3 +95,11 @@ behavior: "smooth"
 }
 });
 });
+
+
+// Animate floating cards on scroll
+window.addEventListener("scroll", () => {
+document.querySelectorAll(".floating-card").forEach(card => {
+card.style.transform = `translateY(${window.scrollY * 0.05}px)`;
+});
+});

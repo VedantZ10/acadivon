@@ -440,3 +440,83 @@ transition:all 0.8s ease;
 opacity:1;
 transform:translateY(0);
 }
+
+/* HERO UPGRADE */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+padding:20px;
+
+background:
+linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+url("sky-bg.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+color:#444;
+max-width:600px;
+margin:auto;
+}
+
+/* GLASS NAVBAR */
+.navbar{
+backdrop-filter: blur(15px);
+background: rgba(255,255,255,0.3);
+border-radius:20px;
+margin:20px;
+padding:15px 40px;
+}
+
+/* FLOATING CARDS */
+.floating-card{
+position:absolute;
+background:rgba(255,255,255,0.8);
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+backdrop-filter: blur(10px);
+
+animation: float 4s ease-in-out infinite;
+}
+
+.floating-card.left{
+left:10%;
+top:60%;
+}
+
+.floating-card.right{
+right:10%;
+top:30%;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+
+/* HERO BUTTONS IMPROVED */
+.primary-btn.big{
+font-size:16px;
+padding:16px 32px;
+}
+
+/* SMOOTH TRANSITIONS */
+*{
+transition:all 0.3s ease;
+}
