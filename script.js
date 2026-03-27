@@ -103,3 +103,48 @@ document.querySelectorAll(".floating-card").forEach(card => {
 card.style.transform = `translateY(${window.scrollY * 0.05}px)`;
 });
 });
+
+function sendMessage(){
+const input = document.getElementById("userInput");
+const chatBox = document.getElementById("chatBox");
+
+const userText = input.value.trim();
+if(userText === "") return;
+
+// User message
+const userMsg = document.createElement("div");
+userMsg.className = "user-message";
+userMsg.innerText = userText;
+chatBox.appendChild(userMsg);
+
+// AI response
+const botMsg = document.createElement("div");
+botMsg.className = "bot-message";
+
+let reply = "";
+
+// Simple AI logic
+if(userText.toLowerCase().includes("attendance")){
+  reply = "Try to maintain at least 75%. Attend next classes regularly.";
+}
+else if(userText.toLowerCase().includes("study plan")){
+  reply = "Study 2-3 subjects daily. Focus more on weak subjects.";
+}
+else if(userText.toLowerCase().includes("low")){
+  reply = "Your attendance seems low. Prioritize classes and reduce absences.";
+}
+else if(userText.toLowerCase().includes("exam")){
+  reply = "Revise daily and practice previous papers. Focus on important topics.";
+}
+else{
+  reply = "I suggest focusing on your weak subjects and maintaining consistency.";
+}
+
+botMsg.innerText = reply;
+chatBox.appendChild(botMsg);
+
+// Auto scroll
+chatBox.scrollTop = chatBox.scrollHeight;
+
+input.value = "";
+}

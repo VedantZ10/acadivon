@@ -566,3 +566,79 @@ padding:16px 32px;
 *{
 transition:all 0.3s ease;
 }
+
+/* AI SECTION */
+.ai-assistant{
+padding:80px 20px;
+text-align:center;
+}
+
+.ai-assistant h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+/* Chat box */
+.chat-container{
+max-width:600px;
+margin:auto;
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.chat-box{
+height:300px;
+overflow-y:auto;
+text-align:left;
+padding:10px;
+margin-bottom:10px;
+}
+
+/* Messages */
+.bot-message{
+background:#e3f0ff;
+padding:10px 15px;
+border-radius:10px;
+margin-bottom:10px;
+width:fit-content;
+}
+
+.user-message{
+background:#3d73d8;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+margin-bottom:10px;
+margin-left:auto;
+width:fit-content;
+}
+
+/* Input */
+.chat-input{
+display:flex;
+gap:10px;
+}
+
+.chat-input input{
+flex:1;
+padding:10px;
+border-radius:8px;
+border:none;
+outline:none;
+}
+
+.chat-input button{
+padding:10px 20px;
+border:none;
+background:#3d73d8;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.chat-input button:hover{
+background:#2f5fcc;
+}
